@@ -1,0 +1,737 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import "vars"
+
+
+* 
+    margin: 0
+    padding: 0
+
+body
+    color: $color-black
+    font-size: 16px
+    font-family: 'Roboto', sans-serif
+    cursor: default
+    padding-top: 92px
+body._lock
+    overflow: hidden
+
+.hidden
+    visibility: hidden
+
+a
+    text-decoration: none
+    cursor: pointer
+
+p 
+    margin: 0
+
+.container
+    margin: 0 auto
+    max-width: 1240px
+    padding: 0 6%
+
+.heading
+    font-weight: normal
+    font-size: 40px
+    line-height: 48px
+    text-align: center
+    
+
+.header
+    padding: 0 6%
+    height: 92px
+    background: #FFFFFF
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.05)
+    display: flex
+    justify-content: space-around
+    align-items: center
+    margin: 0 auto
+    position: fixed
+    z-index: 5
+    top: 0
+    left: 0
+    width: 100%
+    &__link
+        color: $color-black
+        line-height: 24px
+        text-align: center
+        padding: 34px 15px
+        transition: 0.5s
+    &__link:hover
+        color: $color-green
+        text-shadow: $color-light-green -9px -4px 13px
+    &__right
+        display: flex
+    &__left
+        display: flex
+    &__border
+        height: 40px
+        width: 1px
+        background: $color-light-green
+        align-self: center
+        margin-right: 10px
+
+.button
+    align-self: center
+    padding: 10px 20px
+    background: $color-green
+    border-radius: 4px
+    color: $color-white
+    transition: 0.5s
+    &:hover
+        background: $color-light-green
+        color: $color-green
+    &__demo
+        margin: 0 15px 0 20px
+    &__login
+        margin-left: 30px
+        background: $color-light-green
+        color: $color-green
+        &:hover
+            background: $color-green
+            color: $color-white 
+    &__get-started
+        width: 100%
+        margin-top: 10px
+        height: 60px
+        border: 1px transparent
+
+.banner
+    height: 620px
+    background-color: #F1F7F6
+    background-image: url(img/banner-bck.png)
+    background-position: right 20% center
+    background-repeat: no-repeat
+    display: flex
+    align-items: center
+    &__heading
+        font-size: 58px
+        line-height: 67px
+        color: $color-green
+        padding-bottom: 36px
+        font-weight: normal
+    &__box
+        padding-left: 9%
+    &__form
+        display: flex
+        align-items: center
+        justify-content: space-around
+        padding: 0 30px
+        height: 80px
+        background: $color-white
+        box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.1)
+        border-radius: 2px
+        &_search
+            height: 40px
+            border: transparent
+            outline: none
+            color: $color-black
+        &_text
+            color: #64726F
+            padding: 0 40px
+        &_wrapper:hover 
+            color: $color-green
+
+    &__border
+        height: 100%
+        width: 1px
+        background: #DEE3E3
+
+.fa-search
+    margin-right: 15px
+
+.offer
+    text-align: center
+    padding-top: 115px
+    &__heading
+        &_green
+            background-color: $color-light-green
+            padding: 0 8px
+            display: inline-block
+            transition: 0.5s
+            &:hover
+                transform: translate(0, -16px)
+    &__text
+        font-size: 18px
+        line-height: 26px
+        color: $color-dark-green
+        padding-top: 20px
+    &__element
+        &_box
+            display: flex
+            justify-content: space-around
+            width: 100%
+            padding: 80px 0
+        &_heading
+            font-size: 18px
+            text-align: center
+            padding-top: 20px
+        &_text
+            font-size: 15px
+            line-height: 24px
+            text-align: center
+            color: $color-dark-green
+            max-width: 280px
+
+.carousel-indicators
+    bottom: -12px
+
+.carousel-control-prev
+    height: 100%
+
+.carousel-control-next
+    height: 100%
+
+.carousel-control-next-icon 
+    background-image: url(img/carousel-arr-next.svg)
+    width: 20px
+    bottom: 0px
+    position: absolute
+
+.carousel-control-prev-icon 
+    background-image: url(img/carousel-arr-prep.svg)
+    width: 20px
+    bottom: 0px
+    position: absolute
+
+.carousel-indicators [data-bs-target]
+    width: 250px
+    background-color: $color-green
+
+.carousel
+    max-width: 1050px
+    margin: 0 auto
+    padding: 20px 20px 70px
+    
+.carousel__sticker
+    position: absolute
+    width: 480px
+    height: 400px
+    padding: 50px 40px 
+    background: $color-green
+    top: 120px
+    left: -80px
+    color: $color-white
+    &_heading
+        font-size: 30px
+        line-height: 36px
+    &_text
+        font-weight: normal
+        line-height: 24px
+        padding: 13px 0 45px
+
+.d-block
+    position: relative
+
+.carousel-inner
+    position: unset
+
+.carousel-item 
+    position: unset
+
+.gallery-carousel
+    padding-top: 100px
+    padding-bottom: 50px
+    &__heading
+        padding-bottom: 60px
+
+.statistic
+    padding: 100px 6%
+    position: relative
+    &__heading
+        text-align: unset
+    &__box
+        display: flex
+        justify-content: space-around
+    &__bck
+        position: absolute
+        z-index: -1
+        top: -7px
+    &__wrapper
+        max-width: 1180px
+        margin: 0 auto
+    &__illustration
+        z-index: 1
+        position: absolute
+        top: 58px
+        right: 35px
+    &__text
+        font-size: 17px
+        line-height: 26px
+        color: $color-dark-green
+        padding-top: 20px
+        max-width: 480px
+        &_box
+            padding-bottom: 21px
+    &__grid-box
+        padding-top: 60px
+        display: grid
+        grid-template-columns: repeat(5, 1fr)
+        grid-column-gap: 10px
+        color: $color-green
+        &_text
+            max-width: 160px
+            font-size: 14px
+
+.app
+    padding-top: 100px
+    &__heading
+        padding-bottom: 20px
+    &__text
+        font-size: 18px
+        line-height: 26px
+        text-align: center
+        color: $color-dark-green
+        margin: 0 auto
+    &__box
+        padding-top: 60px
+        display: flex
+        justify-content: space-evenly
+    &__item
+        text-align: center
+        transition: 0.5s
+        &_bottom
+            align-self: flex-end
+        &_heading
+            padding-top: 20px
+        &_text
+            padding-bottom: 30px
+            color: $color-dark-green
+        &_img
+            transition: 0.5s
+    &__item:hover
+        transform: translateY(-50px)
+    &__item:hover  .app__item_img
+        box-shadow: -15px 29px 48px -6px $color-green
+        border-radius: 40px
+
+.partnering
+    padding-top: 100px
+    background: #F1F7F6
+    &__text
+        font-size: 18px
+        line-height: 26px
+        text-align: center
+        color: $color-dark-green
+    &__item
+        padding: 40px 30px
+        background: $color-white
+        box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.1)
+        border-radius: 4px
+        max-width: 360px
+        height: 232px
+        text-align: center
+        &_box
+            display: flex
+            justify-content: space-evenly
+            padding-top: 55px
+            padding-bottom: 100px
+            max-width: 1300px
+            margin: 0 auto
+        &_heading
+            padding-top: 20px 
+        &_background
+            position: absolute
+            z-index: -1
+        &_background-1
+            top: -50px
+            left: -40px
+            transition: 2s ease
+        &_background-2
+            bottom: -50px
+            right: -38px
+            transition: 2s ease
+        &_background-3
+            top: -50px
+            right: -40px
+            transition: 2s ease
+        &_wrap
+            position: relative
+            z-index: 1
+        &_wrap:hover .partnering__item_background-1 
+            transform: rotate(360deg)
+        &_wrap:hover .partnering__item_background-2
+            transform: rotate(360deg)
+        &_wrap:hover .partnering__item_background-3 
+            transform: rotate(360deg)
+
+.comments
+    background: #F1F7F6
+    padding-bottom: 150px
+    text-align: center
+    height: 700px
+    position: relative
+    &__pre-heading
+        letter-spacing: 0.8px
+        text-transform: uppercase
+        color: $color-green
+        font-size: 16px
+    &__heading
+        font-weight: normal
+        font-size: 30px
+        padding: 20px 0 17px
+        max-width: 720px
+
+    &__autor
+        color: $color-dark-green
+        padding-bottom: 10px
+    &__link
+        color: $color-black
+        padding-bottom: 5px
+        border-bottom: 1px solid $color-black
+        transition: 0.5s
+        &:hover
+            color: $color-green
+            border-bottom: 1px solid $color-green
+    &__ill
+        position: absolute
+        bottom: -23px
+        left: 53%
+        transform: translate(-50%, 0)
+        
+.partners-block
+    padding: 70px 0
+    &__heading
+        text-align: center
+        letter-spacing: 0.8px
+        text-transform: uppercase
+        color: $color-dark-green
+        font-size: 16px
+        margin-bottom: 20px
+    &__box
+        max-width: 1240px
+        display: grid
+        grid-template-columns: repeat(5, 1fr)
+        align-items: center
+        grid-column-gap: 30px
+    &__img
+        margin: 0 auto
+
+.featured
+    background: rgba(241, 247, 246, 0.5)
+
+.foundation
+    max-width: 1200px
+    padding-top: 80px 
+    display: flex
+    justify-content: space-between
+    &__img_box
+        position: relative
+        z-index: 1
+    &__bck
+        position: absolute
+        z-index: -1
+        top: -50px
+        eft: 8px
+    &__text
+        color: $color-dark-green
+        padding-top: 24px
+        &_box
+            padding-left: 90px
+            padding-top: 155px
+    &__heading
+        text-align: unset
+
+.awards
+    padding-bottom: 100px
+
+.get-started 
+    background-image: url(img/get-started-bck.png)
+    max-width: 1180px
+    height: 560px
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    padding: 0 50px
+    &__form
+        width: 480px
+        height: 420px
+        display: flex
+        flex-direction: column
+        background: white
+        padding: 50px
+    &__heading
+        text-align: unset
+    &__text
+        padding: 20px 0 16px
+        color: $color-dark-green
+    &__input
+        width: 100%
+        padding-left: 20px
+        height: 60px
+        border: 1px solid #DEE3E3
+        box-sizing: border-box
+        border-radius: 4px
+        &:focus-visible
+            outline: 1px solid #00856F
+            outline-style: revert
+
+.footer
+    padding-top: 100px
+    padding-bottom: 40px
+    &__box
+        display: grid
+        grid-template-columns: repeat(5, 1fr)
+        padding-bottom: 60px
+        border-bottom: 1px solid $color-light-green
+    &__link
+        &_last-child
+            grid-column-start: 4
+    &__finds
+        grid-row-start: 1
+        grid-row-end: 6
+        grid-column-start: 5
+        &_box
+            font-size: 30px 
+        &_store
+            padding-bottom: 10px
+            padding-top: 20px
+        &_link
+            color: $color-green
+            transition: 0.5s
+            &:hover
+                color: $color-black
+        &_heading
+            font-weight: 600
+            font-size: 15px
+            line-height: 24px
+    &__heading 
+        padding-bottom: 7px
+        font-weight: 600
+        font-size: 15px
+        line-height: 24px
+        color: $color-black
+        transition: 0.5s
+        &:hover
+            color: $color-green
+    &__link
+        padding-bottom: 15px
+        color: $color-dark-green
+        font-size: 15px
+        line-height: 24px
+        transition: 0.5s
+        &:hover
+            color: $color-green
+            teext-shadow: 4px 5px 7px $color-light-green
+    &__bottom
+        padding-top: 30px
+        display: flex
+        justify-content: space-between
+        &_link
+            display: flex
+        &_text
+            color: $color-black
+            padding-left: 15px
+            transition: 0.5s
+            &:hover
+                color: $color-green
+    &__item 
+        display: flex
+        flex-direction: column
+
+.menu__icon
+    display: none
+        
+
+
+
+@media (max-width: 1100px)
+    .menu__icon
+        z-index: 5
+        display: block
+        position: relative
+        width: 30px
+        height: 18px
+        cursor: pointer
+        &::before
+            top: 0
+        &::after
+            bottom: 0
+        & span
+            top: 50%
+            transform: scale(1) translate(0px, -50%)
+    .menu__icon._active span
+        transform: scale(0) translate(0px, -50%)
+    .menu__icon._active::before
+        top: 50%
+        transform: rotate(-45deg) translate(0px, -50%)
+    .menu__icon._active::after
+        bottom: 50%
+        transform: rotate(45deg) translate(0px, 50%)
+
+    .menu__icon::before, .menu__icon::after,.menu__icon span
+        left: 0
+        position: absolute
+        height: 10%
+        width: 100%
+        transition: all 0.3s ease 0s
+        background-color: $color-green
+    .menu__icon::before, .menu__icon::after
+        content: ""
+    .menu__body
+        position: fixed 
+        top: 0 
+        left: -100%
+        width: 100%
+        height: 100%
+        background-color: rgba(0, 133, 111, 0.8) 
+        padding: 100px 30px 30px 30px
+        overflow: auto
+        &::before
+            content: ""
+            position: fixed
+            width: 100%
+            top: 0
+            left: 0
+            height: 92px
+            background-color: $color-white
+    .menu__body._active
+        left: 0
+    .header
+        justify-content: space-between
+        &__left
+            flex-direction: column
+            height: 100%
+            justify-content: center
+        &__link
+            color: $color-white
+            font-size: 20px
+            &:hover
+                color: $color-white
+        &__border
+            display: none
+    .button
+        font-size: 18px
+        &__login
+            margin: 0
+        &__demo
+            background-color: $color-white
+            color: $color-green
+            &:hover
+                background-color: $color-green
+                color: $color-white
+    .logo
+        z-index: 2
+    
+@media (max-width: 768px)  
+    .partnering
+        overflow: hidden
+        &__item_box
+            flex-wrap: wrap
+        &__item_wrap
+            margin-bottom: 15px
+        .partnering__item_background-3
+            top: 50px
+            left: -30px 
+    .app
+        &__box
+            flex-wrap: wrap
+    .partners-block
+        &__box
+            grid-template-columns: repeat(1, 1fr)
+            grid-row-gap: 20px
+    .foundation
+        overflow: hidden
+        flex-wrap: wrap
+        &__img
+            width: 100%
+        &__text_box
+            padding-left: 5%
+            padding-top: 60px
+            z-index: 1
+    .get-started
+        padding: 0 6%
+        height: unset
+        background-image: none
+        justify-content: center
+        &__form
+            border: 2px solid
+            padding: 30px
+            height: unset
+    .footer
+        &__box
+            grid-template-rows: 1fr 1fr 1fr
+            grid-template-columns: repeat(2, 1fr)
+            padding: 0
+        &__finds
+            grid-row-start: 3
+            grid-column-start: 1
+            grid-column-end: 3
+            &_store
+                padding: 0
+
+    
+
+@media (min-width: 576px)  and (max-width: 768px)   
+    .banner__form_text
+        display: none
+    .statistic__illustration
+        display: none
+   
+   
+
+@media (max-width: 576px)
+    .banner
+        height: unset
+        padding: 75px 6%
+        &__form_text
+            display: none
+        &__heading 
+            font-size: 30px
+            line-height: 35px
+        &__form
+            flex-wrap: wrap
+            width: 100%
+            padding: 20px 20px
+            height: unset
+        &__border
+            display: none
+        &__box
+            padding: 0px
+    .button
+        width: 100%
+        text-align: center
+        &__banner
+            margin-top: 26px
+    .heading
+        font-size: 30px
+        line-height: 35px
+        text-align: start
+    .offer
+        padding-top: 40px
+        &__heading_green
+            margin-bottom: 5px
+        &__text
+            font-size: 14px
+        &__element
+            padding-top: 15px
+            &_box
+                flex-wrap: wrap
+                padding: 40px 0
+    .gallery-carousel
+        padding-top: 20px
+        &__heading
+            padding-bottom: 18px
+    .statistic
+        &__illustration
+            display: none
+        &__grid-box
+            grid-template-columns: repeat(2, 1fr)
+            grid-row-gap: 10px
+            padding: 20px 2%
+    .app
+        padding-top: 0
+        &__text
+            font-size: 14px
+        &__item
+            padding-bottom: 75px
+
+    .partnering
+        padding: 50px 6% 0
+        &__text
+            font-size: 14px
+
+    .comments
+        padding: 0 6%
+        &__ill
+            width: 85%
